@@ -1,0 +1,206 @@
+{
+  "data": {
+    "record_number": {
+      "column": 0,
+      "data_type": "single digit",
+      "notes" : "data record"
+    },
+    "year": {
+      "column": 1,
+      "data_type" : "YYYY",
+      "type" : "datetime"
+    },
+    "date": {
+      "column": 2,
+      "data_type": "JJJ",
+      "type" : "datetime",
+      "notes" : "Julian day of the year"
+    },
+    "hour_min": {
+      "column": 3,
+      "data_type" : "HHMM",
+      "type" : "datetime",
+      "notes" : "variable length, [M, MM, HMM, HHMM]"
+    },
+    "precip_mean": {
+      "column": 4,
+      "type" : "mean",
+      "cdf_var_name" : "org_precip_rate_mean",
+      "qc_var" : "qc_org_precip_rate_mean",
+      "attributes" : {
+        "description" : "See global attributes for individual bit descriptions.",
+        "long_name" : "Quality check results on field: ORG precipitation rate mean",
+        "units": "unitless"
+      }
+    },
+    "wind_speed_offset": {
+      "column": 5,
+      "data_type" : "float",
+      "type" : "offset",
+      "cdf_var_name" : "wind_speed_offset",
+      "notes" : "This variable is represented as a global attribute"
+    },
+    "wind_speed_slope_aux": {
+      "column": 6,
+      "data_type" : "float",
+      "type" : "slope",
+      "cdf_var_name" : "wind_speed_slope_aux",
+      "notes" : "This variable is represented as a global attribute"
+    },
+    "wind_speed_offset_aux": {
+      "column": 7,
+      "data_type" : "float",
+      "type" : "offset",
+      "cdf_var_name" : "wind_speed_offset_aux",
+      "notes" : "This variable is represented as a global attribute"
+    },
+    "temp_mean": {
+      "column": 8,
+      "data_type" : "float",
+      "cdf_var_name" : "temp_mean",
+      "qc_var" : "qc_temp_mean",
+      "notes" : "",
+      "attributes" : {
+        "long_name" : "Temperature mean",
+        "missing_value" : -9999,
+        "units" : "degC",
+        "valid_delta" : 20,
+        "valid_max" : 50,
+        "valid_min" : 0
+      }
+    },
+    "temp_std" : {
+      "column": 9,
+      "data_type" : "float32",
+      "cdf_var_name" : "temp_std",
+      "qc_var" : "None",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name" : "Temperature standard deviation",
+        "units" : "degC"
+      }
+    },
+    "rh_mean": {
+      "column": 10,
+      "data_type" : "float32",
+      "cdf_var_name" : "rh_mean",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name" : "Relative humidity mean",
+        "missing_value" : -9999,
+        "units" : "%",
+        "valid_delta" : 30,
+        "valid_max" : 104,
+        "valid_min" : 0
+      }
+    },
+    "rh_std" : {
+      "column" : 11,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name" : "Relative humidity standard deviation",
+        "units" : "%"
+      }
+    },
+    "vapor_pressure_mean" : {
+      "column" : 12,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name": "Vapor pressure mean, calculated",
+        "missing_value": -9999,
+        "units": "kPa",
+        "valid_delta": 1,
+        "valid_max": 10,
+        "valid_min": 0
+    },
+    "vapor_pressure_std" : {
+      "column" : 13,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "attributes" : {
+        "long_name": "Vapor pressure standard deviation",
+        "units": "kPa"
+      }
+    },
+    "wspd_arith_mean" : {
+      "column" : 14,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name": "Wind speed arithmetic mean",
+        "missing_value": -9999,
+        "units": "m/s",
+        "valid_delta": 20,
+        "valid_max": 60,
+        "valid_min": 0
+      }
+    },
+    "wspd_vec_mean": {
+      "column": 15,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name": "Wind speed vector mean",
+        "missing_value": -9999,
+        "units": "m/s",
+        "valid_delta": 20,
+        "valid_max": 60,
+        "valid_min": 0
+      }
+    },
+    "wdir_vec_mean": {
+      "column": 16,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name": "Wind direction vector mean",
+        "missing_value": -9999,
+        "units": "degree",
+        "valid_max": 360,
+        "valid_min": 0
+      }
+    },
+    "wdir_vec_std": {
+      "column": 17,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name": "Wind direction vector mean standard deviation",
+        "missing_value": -9999,
+        "units": "degree"
+      }
+    },
+    "_unknown1": {
+      "column": 18,
+      "data_type" : "",
+      "dimensions" : "",
+      "notes" : "",
+      "attributes" : {
+      }
+    },
+    "wspd_arith_mean_aux": {
+      "column": 21,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+        "long_name": "Wind speed arithmetic mean, auxiliary sensor",
+        "missing_value": -9999,
+        "units": "m/s",
+        "valid_delta": 20,
+        "valid_max": 60,
+        "valid_min": 0
+      }
+    }
+  }
+}

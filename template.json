@@ -1,0 +1,8 @@
+    "": {
+      "column": ,
+      "data_type" : "float32",
+      "dimensions" : "time",
+      "notes" : "",
+      "attributes" : {
+      }
+    },
